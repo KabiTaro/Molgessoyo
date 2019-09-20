@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148401129-1"></script>
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-148401129-1');
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/kusogame.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <h2>Q:ﾅﾆｺﾚ</h2>
-      <h2>A:Unity製シューティングです。お友達にも教えてあげてくださいね。</h2>
       <div class="footer">
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title">スマホでは動作しません。</div>
       </div>
+      <h2>Q:ﾅﾆｺﾚ</h2>
+      <h2>A:Unity製シューティングです。お友達にも教えてあげてくださいね。</h2>
     </div>
 
   </body>
